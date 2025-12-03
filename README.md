@@ -27,7 +27,7 @@
 + val zoneId = ZoneIds.AMERICA_LOS_ANGELES
 ```
 
-## Features
+## ✨ Features
 ### Parsing
 _Convert strings into Java Time objects with ease_
 ```kotlin
@@ -103,7 +103,7 @@ val result = LocalDateTimes.tomorrow()
 val result = ZonedDateTimes.nextMonday()
 ```
 
-## Installation
+## 🔨 Installation
 Add the following to your module’s `build.gradle`:
 ```gradle
 repositories {
@@ -145,5 +145,8 @@ For more information on Android desugaring click [here](https://developer.androi
 
 </details>
 
-## Find this library useful? 😏
-If you like what you see, please star the repository __[as others have](https://github.com/seljabali/java-time-fun/stargazers)__! ⭐️ <br>
+## 😏 Find this library useful?
+If you like what you see, please star the repository __[as others have](https://github.com/seljabali/java-time-fun/stargazers)__! ⭐️
+
+## 🍪 Extras
+[DateTimeFormats](https://gist.github.com/seljabali/d9476427db7f39645d8f94f8a0707751) to help with day to day printing/parsing of datetimes!
