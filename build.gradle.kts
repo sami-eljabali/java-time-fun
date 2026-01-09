@@ -54,11 +54,11 @@ publishing {
             pom {
                 name.set(project.name)
                 description.set("java.time Kotlin extension functions library.")
-                url.set("https://github.com/seljabali/java-time-fun")
+                url.set("https://github.com/sami-eljabali/java-time-fun")
                 licenses {
                     license {
                         name.set("MIT License")
-                        url.set("https://github.com/seljabali/java-time-fun/blob/main/LICENSE")
+                        url.set("https://github.com/sami-eljabali/java-time-fun/blob/main/LICENSE")
                     }
                 }
                 developers {
@@ -72,7 +72,7 @@ publishing {
                 scm {
                     connection.set("scm:git:git://github.com/seljabali/java-time-fun.git")
                     developerConnection.set("scm:git:ssh://github.com/seljabali/java-time-fun.git")
-                    url.set("https://github.com/seljabali/java-time-fun/tree/main")
+                    url.set("https://github.com/sami-eljabali/java-time-fun/tree/main")
                 }
             }
             groupId = project.group as String

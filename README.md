@@ -5,7 +5,7 @@
 <h3 align="center"><strong>Java Time Fun</strong></h3>
 <p align="center">Java Time Kotlin extension functions.</p>
 <p align="center">
-  <a href="https://github.com/seljabali/java-time-fun/actions?query=branch%3Amain"><img alt="Build Status" src="https://github.com/seljabali/java-time-fun/actions/workflows/main.yml/badge.svg"/></a> 
+  <a href="https://github.com/sami-eljabali/java-time-fun/actions?query=branch%3Amain"><img alt="Build Status" src="https://github.com/sami-eljabali/java-time-fun/actions/workflows/main.yml/badge.svg"/></a> 
   <a href="https://repo1.maven.org/maven2/org/eljabali/sami/javatimefun/javatimefun/"><img alt="Maven Central" src="https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Forg%2Feljabali%2Fsami%2Fjavatimefun%2Fjavatimefun%2Fmaven-metadata.xml"/></a> 
   <a href="https://kotlinlang.org"><img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-2.2.21-orange.svg?style=flat&logo=kotlin"/></a>
   <a href="https://mailchi.mp/kotlinweekly/kotlin-weekly-396"><img alt="Kotlin Weekly" src="https://skydoves.github.io/badges/kotlin-weekly.svg"/></a>
@@ -146,7 +146,7 @@ For more information on Android desugaring click [here](https://developer.androi
 </details>
 
 ## 😏 Find this library useful?
-If you like what you see, please star the repository __[as others have](https://github.com/seljabali/java-time-fun/stargazers)__! ⭐️
+If you like what you see, please star the repository __[as others have](https://github.com/sami-eljabali/java-time-fun/stargazers)__! ⭐️
 
 ## 🍪 Extras
-[DateTimeFormats](https://gist.github.com/seljabali/d9476427db7f39645d8f94f8a0707751) to help with day to day printing/parsing of datetimes!
+[DateTimeFormats](https://gist.github.com/sami-eljabali/d9476427db7f39645d8f94f8a0707751) to help with day to day printing/parsing of datetimes!
