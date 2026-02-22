@@ -6,16 +6,23 @@ import java.time.format.DateTimeParseException
 
 /**
  * Works off of String representations of date, without time, nor time zone.
- * When a format is present, it'll try parsing using that format alone, & return null if it fails.
+ * When formats are provided, each format is attempted in-order until one succeeds.
  *
  * @param this String representation of LocalDate.
- * @param format String representing format that should solely be used when parsing the date.
+ * @param formats String? vararg of formats to attempt when parsing.
  * @return LocalDate? Null means couldn't parse, else parsed LocalDate.
  */
-fun String.toLocalDate(format: String? = null): LocalDate? =
+fun String.toLocalDate(vararg formats: String?): LocalDate? =
+    if (formats.isEmpty()) {
+        parseLocalDateOrNull(this)
+    } else {
+        formats.firstNotNullOfOrNull { format -> parseLocalDateOrNull(this, format) }
+    }
+
+private fun parseLocalDateOrNull(dateText: String, format: String? = null): LocalDate? =
     if (format.isNullOrEmpty()) {
         try {
-            LocalDate.parse(this)
+            LocalDate.parse(dateText)
         } catch (e: DateTimeParseException) {
             null
         } catch (e: IllegalArgumentException) {
@@ -23,7 +30,7 @@ fun String.toLocalDate(format: String? = null): LocalDate? =
         }
     } else {
         try {
-            LocalDate.parse(this, DateTimeFormatter.ofPattern(format))
+            LocalDate.parse(dateText, DateTimeFormatter.ofPattern(format))
         } catch (e: DateTimeParseException) {
             null
         } catch (e: IllegalArgumentException) {

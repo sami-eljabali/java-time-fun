@@ -117,4 +117,19 @@ class LocalDateTimeParsingExtensionsTest {
         assertEquals(dateInText, dateParsed.print(ISO_8601_6S))
     }
 
+    @Test
+    fun `given multiple formats, when first fails and second succeeds, then should parse using successful format`() {
+        // given
+        val dateInText = "07/26/2023 12:34:56"
+
+        // when
+        val dateParsed: LocalDateTime = dateInText.toLocalDateTime(
+            "yyyy-MM-dd HH:mm:ss",
+            "MM/dd/yyyy HH:mm:ss"
+        ) ?: throw RuntimeException("Failed to parse")
+
+        // then
+        assertEquals("2023-07-26T12:34:56", dateParsed.toString())
+    }
+
 }
