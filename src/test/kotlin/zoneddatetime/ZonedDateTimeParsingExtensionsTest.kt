@@ -146,4 +146,19 @@ class ZonedDateTimeParsingExtensionsTest {
         assertEquals(dateInText, dateParsed.print(YYYY_MM_DD_DASH_T_HH_MM_SS_XXX))
     }
 
+    @Test
+    fun `given multiple formats, when first fails and second succeeds, then should parse using successful format`() {
+        // given
+        val dateInText = "2024-02-17 12:34:56+0000"
+
+        // when
+        val dateParsed: ZonedDateTime = dateInText.toZonedDateTime(
+            "yyyy-MM-dd'T'HH:mm:ssXXX",
+            "yyyy-MM-dd HH:mm:ssZ"
+        ) ?: throw RuntimeException("Failed to parse")
+
+        // then
+        assertEquals("2024-02-17T12:34:56Z", dateParsed.print(YYYY_MM_DD_DASH_T_HH_MM_SS_XXX))
+    }
+
 }

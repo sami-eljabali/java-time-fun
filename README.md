@@ -33,7 +33,8 @@ _Convert strings into Java Time objects with ease_
 ```kotlin
 val result = "01:30 AM".toLocalTime()
 val result = "2021-06-07".toLocalDate()
-val result = "06/07/2021".toLocalDate(format = "MM/dd/yyyy")
+val result = "06/07/2021".toLocalDate("MM/dd/yyyy")
+val result = "06/07/2021".toLocalDate("yyyy-MM-dd", "MM/dd/yyyy")
 val result = "2024-11-15T12:34:56.123456Z".toLocalDateTime() // handles fractional seconds that Java Time doesn't
 val result = "2021-10-04T10:10:00+0000".toZonedDateTime()
 ```
