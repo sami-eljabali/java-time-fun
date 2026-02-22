@@ -44,7 +44,7 @@ $dokka.location:javatimefun.localdate.extensions//isEqualMonth/java.time.LocalDa
 $dokka.location:javatimefun.localdate.extensions//isEqualYear/java.time.LocalDate#java.time.LocalDate/PointingToDeclaration/javatimefun/javatimefun.localdate.extensions/is-equal-year.html
 $dokka.location:javatimefun.localdate.extensions//isInLeapYear/java.time.LocalDate#/PointingToDeclaration/javatimefun/javatimefun.localdate.extensions/is-in-leap-year.html
 $dokka.location:javatimefun.localdate.extensions//print/java.time.LocalDate#kotlin.String#java.util.Locale/PointingToDeclaration/javatimefun/javatimefun.localdate.extensions/print.html
-$dokka.location:javatimefun.localdate.extensions//toLocalDate/kotlin.String#kotlin.String?/PointingToDeclaration/javatimefun/javatimefun.localdate.extensions/to-local-date.html
+$dokka.location:javatimefun.localdate.extensions//toLocalDate/kotlin.String#kotlin.Array[kotlin.String?]/PointingToDeclaration/javatimefun/javatimefun.localdate.extensions/to-local-date.html
 $dokka.location:javatimefun.localdate////PointingToDeclaration/javatimefun/javatimefun.localdate/index.html
 $dokka.location:javatimefun.localdate/LocalDateFactory///PointingToDeclaration/javatimefun/javatimefun.localdate/-local-date-factory/index.html
 $dokka.location:javatimefun.localdate/LocalDateFactory/new/#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/javatimefun/javatimefun.localdate/-local-date-factory/new.html
@@ -116,7 +116,7 @@ $dokka.location:javatimefun.localdatetime.extensions//isEqualTime/java.time.Loca
 $dokka.location:javatimefun.localdatetime.extensions//isEqualYear/java.time.LocalDateTime#java.time.LocalDateTime/PointingToDeclaration/javatimefun/javatimefun.localdatetime.extensions/is-equal-year.html
 $dokka.location:javatimefun.localdatetime.extensions//isInLeapYear/java.time.LocalDateTime#/PointingToDeclaration/javatimefun/javatimefun.localdatetime.extensions/is-in-leap-year.html
 $dokka.location:javatimefun.localdatetime.extensions//print/java.time.LocalDateTime#kotlin.String#java.util.Locale/PointingToDeclaration/javatimefun/javatimefun.localdatetime.extensions/print.html
-$dokka.location:javatimefun.localdatetime.extensions//toLocalDateTime/kotlin.String#kotlin.String?/PointingToDeclaration/javatimefun/javatimefun.localdatetime.extensions/to-local-date-time.html
+$dokka.location:javatimefun.localdatetime.extensions//toLocalDateTime/kotlin.String#kotlin.Array[kotlin.String?]/PointingToDeclaration/javatimefun/javatimefun.localdatetime.extensions/to-local-date-time.html
 $dokka.location:javatimefun.localdatetime.extensions//withLocalTime/java.time.LocalDateTime#java.time.LocalTime/PointingToDeclaration/javatimefun/javatimefun.localdatetime.extensions/with-local-time.html
 $dokka.location:javatimefun.localdatetime////PointingToDeclaration/javatimefun/javatimefun.localdatetime/index.html
 $dokka.location:javatimefun.localdatetime/LocalDateTimeFactory///PointingToDeclaration/javatimefun/javatimefun.localdatetime/-local-date-time-factory/index.html
@@ -159,7 +159,7 @@ $dokka.location:javatimefun.localtime.extensions//isEqualTime/java.time.LocalTim
 $dokka.location:javatimefun.localtime.extensions//isInAm/java.time.LocalTime#/PointingToDeclaration/javatimefun/javatimefun.localtime.extensions/is-in-am.html
 $dokka.location:javatimefun.localtime.extensions//isInPm/java.time.LocalTime#/PointingToDeclaration/javatimefun/javatimefun.localtime.extensions/is-in-pm.html
 $dokka.location:javatimefun.localtime.extensions//print/java.time.LocalTime#kotlin.String#java.util.Locale/PointingToDeclaration/javatimefun/javatimefun.localtime.extensions/print.html
-$dokka.location:javatimefun.localtime.extensions//toLocalTime/kotlin.String#kotlin.String?/PointingToDeclaration/javatimefun/javatimefun.localtime.extensions/to-local-time.html
+$dokka.location:javatimefun.localtime.extensions//toLocalTime/kotlin.String#kotlin.Array[kotlin.String?]/PointingToDeclaration/javatimefun/javatimefun.localtime.extensions/to-local-time.html
 $dokka.location:javatimefun.localtime////PointingToDeclaration/javatimefun/javatimefun.localtime/index.html
 $dokka.location:javatimefun.localtime/LocalTimeUtil///PointingToDeclaration/javatimefun/javatimefun.localtime/-local-time-util/index.html
 $dokka.location:javatimefun.localtime/LocalTimeUtil/new/#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/javatimefun/javatimefun.localtime/-local-time-util/new.html
@@ -211,7 +211,7 @@ $dokka.location:javatimefun.zoneddatetime.extensions//isEqualTime/java.time.Zone
 $dokka.location:javatimefun.zoneddatetime.extensions//isEqualYear/java.time.ZonedDateTime#java.time.ZonedDateTime/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/is-equal-year.html
 $dokka.location:javatimefun.zoneddatetime.extensions//isInLeapYear/java.time.ZonedDateTime#/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/is-in-leap-year.html
 $dokka.location:javatimefun.zoneddatetime.extensions//print/java.time.ZonedDateTime#kotlin.String#java.util.Locale/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/print.html
-$dokka.location:javatimefun.zoneddatetime.extensions//toZonedDateTime/kotlin.String#kotlin.String?/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/to-zoned-date-time.html
+$dokka.location:javatimefun.zoneddatetime.extensions//toZonedDateTime/kotlin.String#kotlin.Array[kotlin.String?]/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/to-zoned-date-time.html
 $dokka.location:javatimefun.zoneddatetime.extensions//withLocalTime/java.time.ZonedDateTime#java.time.LocalTime/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/with-local-time.html
 $dokka.location:javatimefun.zoneddatetime.extensions//withTimeZoneOf/java.time.ZonedDateTime#java.time.ZonedDateTime/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/with-time-zone-of.html
 $dokka.location:javatimefun.zoneddatetime////PointingToDeclaration/javatimefun/javatimefun.zoneddatetime/index.html
