@@ -150,4 +150,5 @@ For more information on Android desugaring click [here](https://developer.androi
 If you like what you see, please star the repository __[as others have](https://github.com/sami-eljabali/java-time-fun/stargazers)__! ⭐️
 
 ## 🍪 Extras
-[DateTimeFormats](https://gist.github.com/sami-eljabali/d9476427db7f39645d8f94f8a0707751) to help with day to day printing/parsing of datetimes!
+* [DateTimeFormats](https://gist.github.com/sami-eljabali/d9476427db7f39645d8f94f8a0707751) to help with day to day printing/parsing!
+* [Kotlinx Datetime Fun](https://github.com/sami-eljabali/kotlinx-datetime-fun) for Kotlin Multiplatform projects.
