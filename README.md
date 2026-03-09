@@ -2,7 +2,7 @@
    <img src="screenshots/logo.png" width=300px alt="SwiftDate" title="SwiftDate">
  </p>
  
-<h3 align="center"><strong>Java Time Fun</strong></h3>
+<h1 align="center">Java Time Fun</h1>
 <p align="center">Java Time Kotlin extension functions.</p>
 <p align="center">
   <a href="https://github.com/sami-eljabali/java-time-fun/actions?query=branch%3Amain"><img alt="Build Status" src="https://github.com/sami-eljabali/java-time-fun/actions/workflows/main.yml/badge.svg"/></a> 
