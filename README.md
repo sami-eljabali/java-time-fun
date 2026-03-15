@@ -151,4 +151,4 @@ If you like what you see, please star the repository __[as others have](https://
 
 ## 🍪 Extras
 * [DateTimeFormats](https://gist.github.com/sami-eljabali/d9476427db7f39645d8f94f8a0707751) to help with day to day printing/parsing!
-* [Kotlinx Datetime Fun](https://github.com/sami-eljabali/kotlinx-datetime-fun) for Kotlin Multiplatform projects.
+* [Kotlinx Datetime Fun](https://github.com/sami-eljabali/kotlinx-datetime-fun) library for Kotlin Multiplatform projects.
