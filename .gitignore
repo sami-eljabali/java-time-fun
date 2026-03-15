@@ -5,6 +5,7 @@
 .kotlin
 app/build
 build
+.claude
 
 # Mac
 .DS_Store
