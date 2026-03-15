@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>javatimefun.localdatetime.extensions</title>
     <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
-    <script>var pathToRoot = "../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+        <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
@@ -25,43 +25,86 @@
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
-<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
-<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
 </head>
 <body>
-    <div class="root">
-<nav class="navigation" id="navigation-wrapper">
-    <div class="navigation--inner">
-        <div class="navigation-title">
-            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
-            <div class="library-name">
-                    <a class="library-name--link" href="../../index.html">
-                            javatimefun
-                    </a>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../index.html" tabindex="1">
+                    javatimefun
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+4.0.3        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":/main"
+                                       data-filter=":/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div class="library-version">
-4.0.3            </div>
-        </div>
-        <div class="filter-section" id="filter-section">
-                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
-        </div>
-    </div>
-    <div class="navigation-controls">
-        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
-        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
-    </div>
-</nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="sidebar--inner" id="sideMenu"></div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
             </div>
-            <div id="main">
-<div class="main-content" data-page-type="package" id="content" pageIds="javatimefun::javatimefun.localdatetime.extensions////PointingToDeclaration//769193423">
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    javatimefun
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="javatimefun::javatimefun.localdatetime.extensions////PointingToDeclaration//-251573632">
   <div class="breadcrumbs"><a href="../../index.html">javatimefun</a><span class="delimiter">/</span><span class="current">javatimefun.localdatetime.extensions</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
@@ -70,708 +113,708 @@
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="EXTENSION_FUNCTION">
-        <h2 class="">Functions</h2>
-        <div class="table"><a data-name="-261406745%2FFunctions%2F769193423" anchor-label="atEndOfDay" id="-261406745%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-261406745%2FFunctions%2F-251573632" anchor-label="atEndOfDay" id="-261406745%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="at-end-of-day.html"><span>at</span><wbr></wbr><span>End</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-261406745%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-261406745%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="at-end-of-day.html"><span class="token function">atEndOfDay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="at-end-of-day.html"><span class="token function">atEndOfDay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-363774965%2FFunctions%2F769193423" anchor-label="atEndOfMonth" id="-363774965%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-363774965%2FFunctions%2F-251573632" anchor-label="atEndOfMonth" id="-363774965%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="at-end-of-month.html"><span>at</span><wbr></wbr><span>End</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Month</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-363774965%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-363774965%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="at-end-of-month.html"><span class="token function">atEndOfMonth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="at-end-of-month.html"><span class="token function">atEndOfMonth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="45566848%2FFunctions%2F769193423" anchor-label="atStartOfDay" id="45566848%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="45566848%2FFunctions%2F-251573632" anchor-label="atStartOfDay" id="45566848%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="at-start-of-day.html"><span>at</span><wbr></wbr><span>Start</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="45566848%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="45566848%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="at-start-of-day.html"><span class="token function">atStartOfDay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="at-start-of-day.html"><span class="token function">atStartOfDay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1714895516%2FFunctions%2F769193423" anchor-label="atStartOfMonth" id="-1714895516%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1714895516%2FFunctions%2F-251573632" anchor-label="atStartOfMonth" id="-1714895516%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="at-start-of-month.html"><span>at</span><wbr></wbr><span>Start</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Month</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1714895516%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1714895516%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="at-start-of-month.html"><span class="token function">atStartOfMonth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="at-start-of-month.html"><span class="token function">atStartOfMonth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="888880%2FFunctions%2F769193423" anchor-label="compareDay" id="888880%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="888880%2FFunctions%2F-251573632" anchor-label="compareDay" id="888880%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="compare-day.html"><span>compare</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="888880%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="888880%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="compare-day.html"><span class="token function">compareDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toDate<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="compare-day.html"><span class="token function">compareDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toDate<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1476603380%2FFunctions%2F769193423" anchor-label="compareMonth" id="-1476603380%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1476603380%2FFunctions%2F-251573632" anchor-label="compareMonth" id="-1476603380%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="compare-month.html"><span>compare</span><wbr></wbr><span><span>Month</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1476603380%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1476603380%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="compare-month.html"><span class="token function">compareMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="compare-month.html"><span class="token function">compareMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1300771881%2FFunctions%2F769193423" anchor-label="compareTime" id="1300771881%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1300771881%2FFunctions%2F-251573632" anchor-label="compareTime" id="1300771881%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="compare-time.html"><span>compare</span><wbr></wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1300771881%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1300771881%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="compare-time.html"><span class="token function">compareTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toDate<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="compare-time.html"><span class="token function">compareTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toDate<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="795312313%2FFunctions%2F769193423" anchor-label="compareYear" id="795312313%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="795312313%2FFunctions%2F-251573632" anchor-label="compareYear" id="795312313%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="compare-year.html"><span>compare</span><wbr></wbr><span><span>Year</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="795312313%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="795312313%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="compare-year.html"><span class="token function">compareYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="compare-year.html"><span class="token function">compareYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1448122683%2FFunctions%2F769193423" anchor-label="fromUtcToZone" id="1448122683%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1448122683%2FFunctions%2F-251573632" anchor-label="fromUtcToZone" id="1448122683%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="from-utc-to-zone.html"><span>from</span><wbr></wbr><span>Utc</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Zone</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1448122683%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1448122683%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="from-utc-to-zone.html"><span class="token function">fromUtcToZone</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toZoneId<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html">ZoneId</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="from-utc-to-zone.html"><span class="token function">fromUtcToZone</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toZoneId<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZoneId.html">ZoneId</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="692122253%2FFunctions%2F769193423" anchor-label="fromZoneToUtc" id="692122253%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="692122253%2FFunctions%2F-251573632" anchor-label="fromZoneToUtc" id="692122253%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="from-zone-to-utc.html"><span>from</span><wbr></wbr><span>Zone</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Utc</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="692122253%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="692122253%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="from-zone-to-utc.html"><span class="token function">fromZoneToUtc</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromZoneId<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html">ZoneId</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="from-zone-to-utc.html"><span class="token function">fromZoneToUtc</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromZoneId<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZoneId.html">ZoneId</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-294626408%2FFunctions%2F769193423" anchor-label="fromZoneToZone" id="-294626408%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-294626408%2FFunctions%2F-251573632" anchor-label="fromZoneToZone" id="-294626408%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="from-zone-to-zone.html"><span>from</span><wbr></wbr><span>Zone</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Zone</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-294626408%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-294626408%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="from-zone-to-zone.html"><span class="token function">fromZoneToZone</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromZoneId<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html">ZoneId</a><span class="token punctuation">, </span></span><span class="parameter ">toZoneId<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html">ZoneId</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="from-zone-to-zone.html"><span class="token function">fromZoneToZone</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromZoneId<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZoneId.html">ZoneId</a><span class="token punctuation">, </span></span><span class="parameter ">toZoneId<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZoneId.html">ZoneId</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1361317988%2FFunctions%2F769193423" anchor-label="getDayDifference" id="1361317988%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1361317988%2FFunctions%2F-251573632" anchor-label="getDayDifference" id="1361317988%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-day-difference.html"><span>get</span><wbr></wbr><span>Day</span><wbr></wbr><span><span>Difference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1361317988%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1361317988%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-day-difference.html"><span class="token function">getDayDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-day-difference.html"><span class="token function">getDayDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1451642824%2FFunctions%2F769193423" anchor-label="getDaysInMonth" id="-1451642824%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1451642824%2FFunctions%2F-251573632" anchor-label="getDaysInMonth" id="-1451642824%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-days-in-month.html"><span>get</span><wbr></wbr><span>Days</span><wbr></wbr><span>In</span><wbr></wbr><span><span>Month</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1451642824%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1451642824%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-days-in-month.html"><span class="token function">getDaysInMonth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-days-in-month.html"><span class="token function">getDaysInMonth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1353121572%2FFunctions%2F769193423" anchor-label="getHourDifference" id="1353121572%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1353121572%2FFunctions%2F-251573632" anchor-label="getHourDifference" id="1353121572%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-hour-difference.html"><span>get</span><wbr></wbr><span>Hour</span><wbr></wbr><span><span>Difference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1353121572%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1353121572%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-hour-difference.html"><span class="token function">getHourDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-hour-difference.html"><span class="token function">getHourDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1227908170%2FFunctions%2F769193423" anchor-label="getLast" id="-1227908170%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1227908170%2FFunctions%2F-251573632" anchor-label="getLast" id="-1227908170%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-last.html"><span>get</span><wbr></wbr><span><span>Last</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1227908170%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1227908170%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-last.html"><span class="token function">getLast</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dayOfWeek<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/DayOfWeek.html">DayOfWeek</a><span class="token punctuation">, </span></span><span class="parameter ">countingInThisDay<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-last.html"><span class="token function">getLast</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dayOfWeek<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/DayOfWeek.html">DayOfWeek</a><span class="token punctuation">, </span></span><span class="parameter ">countingInThisDay<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="2083345396%2FFunctions%2F769193423" anchor-label="getMinuteDifference" id="2083345396%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2083345396%2FFunctions%2F-251573632" anchor-label="getMinuteDifference" id="2083345396%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-minute-difference.html"><span>get</span><wbr></wbr><span>Minute</span><wbr></wbr><span><span>Difference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2083345396%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2083345396%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-minute-difference.html"><span class="token function">getMinuteDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-minute-difference.html"><span class="token function">getMinuteDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1768269037%2FFunctions%2F769193423" anchor-label="getMonthBaseZero" id="1768269037%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1768269037%2FFunctions%2F-251573632" anchor-label="getMonthBaseZero" id="1768269037%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-month-base-zero.html"><span>get</span><wbr></wbr><span>Month</span><wbr></wbr><span>Base</span><wbr></wbr><span><span>Zero</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1768269037%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1768269037%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-month-base-zero.html"><span class="token function">getMonthBaseZero</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-month-base-zero.html"><span class="token function">getMonthBaseZero</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-268650752%2FFunctions%2F769193423" anchor-label="getMonthDifference" id="-268650752%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-268650752%2FFunctions%2F-251573632" anchor-label="getMonthDifference" id="-268650752%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-month-difference.html"><span>get</span><wbr></wbr><span>Month</span><wbr></wbr><span><span>Difference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-268650752%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-268650752%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-month-difference.html"><span class="token function">getMonthDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-month-difference.html"><span class="token function">getMonthDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1983861037%2FFunctions%2F769193423" anchor-label="getNext" id="-1983861037%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1983861037%2FFunctions%2F-251573632" anchor-label="getNext" id="-1983861037%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-next.html"><span>get</span><wbr></wbr><span><span>Next</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1983861037%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1983861037%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-next.html"><span class="token function">getNext</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dayOfWeek<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/DayOfWeek.html">DayOfWeek</a><span class="token punctuation">, </span></span><span class="parameter ">countingInThisDay<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-next.html"><span class="token function">getNext</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dayOfWeek<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/DayOfWeek.html">DayOfWeek</a><span class="token punctuation">, </span></span><span class="parameter ">countingInThisDay<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1242907028%2FFunctions%2F769193423" anchor-label="getSecondDifference" id="1242907028%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1242907028%2FFunctions%2F-251573632" anchor-label="getSecondDifference" id="1242907028%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-second-difference.html"><span>get</span><wbr></wbr><span>Second</span><wbr></wbr><span><span>Difference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1242907028%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1242907028%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-second-difference.html"><span class="token function">getSecondDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-second-difference.html"><span class="token function">getSecondDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1582067221%2FFunctions%2F769193423" anchor-label="getYearDifference" id="-1582067221%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1582067221%2FFunctions%2F-251573632" anchor-label="getYearDifference" id="-1582067221%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-year-difference.html"><span>get</span><wbr></wbr><span>Year</span><wbr></wbr><span><span>Difference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1582067221%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1582067221%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-year-difference.html"><span class="token function">getYearDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="get-year-difference.html"><span class="token function">getYearDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-643999267%2FFunctions%2F769193423" anchor-label="isAfterDay" id="-643999267%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-643999267%2FFunctions%2F-251573632" anchor-label="isAfterDay" id="-643999267%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-after-day.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-643999267%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-643999267%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-day.html"><span class="token function">isAfterDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-day.html"><span class="token function">isAfterDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-754106687%2FFunctions%2F769193423" anchor-label="isAfterEqualDay" id="-754106687%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-754106687%2FFunctions%2F-251573632" anchor-label="isAfterEqualDay" id="-754106687%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-after-equal-day.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-754106687%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-754106687%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-day.html"><span class="token function">isAfterEqualDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-day.html"><span class="token function">isAfterEqualDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1177870243%2FFunctions%2F769193423" anchor-label="isAfterEqualMonth" id="-1177870243%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1177870243%2FFunctions%2F-251573632" anchor-label="isAfterEqualMonth" id="-1177870243%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-after-equal-month.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Month</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1177870243%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1177870243%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-month.html"><span class="token function">isAfterEqualMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-month.html"><span class="token function">isAfterEqualMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-629254216%2FFunctions%2F769193423" anchor-label="isAfterEqualTime" id="-629254216%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-629254216%2FFunctions%2F-251573632" anchor-label="isAfterEqualTime" id="-629254216%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-after-equal-time.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-629254216%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-629254216%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-time.html"><span class="token function">isAfterEqualTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-time.html"><span class="token function">isAfterEqualTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1134713784%2FFunctions%2F769193423" anchor-label="isAfterEqualYear" id="-1134713784%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1134713784%2FFunctions%2F-251573632" anchor-label="isAfterEqualYear" id="-1134713784%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-after-equal-year.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Year</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1134713784%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1134713784%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-year.html"><span class="token function">isAfterEqualYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-year.html"><span class="token function">isAfterEqualYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1556145273%2FFunctions%2F769193423" anchor-label="isAfterMonth" id="1556145273%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1556145273%2FFunctions%2F-251573632" anchor-label="isAfterMonth" id="1556145273%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-after-month.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span><span>Month</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1556145273%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1556145273%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-month.html"><span class="token function">isAfterMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-month.html"><span class="token function">isAfterMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1510891492%2FFunctions%2F769193423" anchor-label="isAfterTime" id="-1510891492%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1510891492%2FFunctions%2F-251573632" anchor-label="isAfterTime" id="-1510891492%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-after-time.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1510891492%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1510891492%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-time.html"><span class="token function">isAfterTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-time.html"><span class="token function">isAfterTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-2016351060%2FFunctions%2F769193423" anchor-label="isAfterYear" id="-2016351060%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2016351060%2FFunctions%2F-251573632" anchor-label="isAfterYear" id="-2016351060%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-after-year.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span><span>Year</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2016351060%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2016351060%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-year.html"><span class="token function">isAfterYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-after-year.html"><span class="token function">isAfterYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-797316559%2FFunctions%2F769193423" anchor-label="isAtEndOfDay" id="-797316559%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-797316559%2FFunctions%2F-251573632" anchor-label="isAtEndOfDay" id="-797316559%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-at-end-of-day.html"><span>is</span><wbr></wbr><span>At</span><wbr></wbr><span>End</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-797316559%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-797316559%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-at-end-of-day.html"><span class="token function">isAtEndOfDay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-at-end-of-day.html"><span class="token function">isAtEndOfDay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="432311114%2FFunctions%2F769193423" anchor-label="isAtStartOfDay" id="432311114%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="432311114%2FFunctions%2F-251573632" anchor-label="isAtStartOfDay" id="432311114%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-at-start-of-day.html"><span>is</span><wbr></wbr><span>At</span><wbr></wbr><span>Start</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="432311114%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="432311114%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-at-start-of-day.html"><span class="token function">isAtStartOfDay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-at-start-of-day.html"><span class="token function">isAtStartOfDay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1673609016%2FFunctions%2F769193423" anchor-label="isBeforeDay" id="-1673609016%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1673609016%2FFunctions%2F-251573632" anchor-label="isBeforeDay" id="-1673609016%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-before-day.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1673609016%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1673609016%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-day.html"><span class="token function">isBeforeDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-day.html"><span class="token function">isBeforeDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="744387254%2FFunctions%2F769193423" anchor-label="isBeforeEqualDay" id="744387254%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="744387254%2FFunctions%2F-251573632" anchor-label="isBeforeEqualDay" id="744387254%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-before-equal-day.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="744387254%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="744387254%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-day.html"><span class="token function">isBeforeEqualDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-day.html"><span class="token function">isBeforeEqualDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="60762898%2FFunctions%2F769193423" anchor-label="isBeforeEqualMonth" id="60762898%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="60762898%2FFunctions%2F-251573632" anchor-label="isBeforeEqualMonth" id="60762898%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-before-equal-month.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Month</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="60762898%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="60762898%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-month.html"><span class="token function">isBeforeEqualMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-month.html"><span class="token function">isBeforeEqualMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1420582301%2FFunctions%2F769193423" anchor-label="isBeforeEqualTime" id="-1420582301%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1420582301%2FFunctions%2F-251573632" anchor-label="isBeforeEqualTime" id="-1420582301%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-before-equal-time.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1420582301%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1420582301%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-time.html"><span class="token function">isBeforeEqualTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-time.html"><span class="token function">isBeforeEqualTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1926041869%2FFunctions%2F769193423" anchor-label="isBeforeEqualYear" id="-1926041869%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1926041869%2FFunctions%2F-251573632" anchor-label="isBeforeEqualYear" id="-1926041869%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-before-equal-year.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Year</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1926041869%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1926041869%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-year.html"><span class="token function">isBeforeEqualYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-year.html"><span class="token function">isBeforeEqualYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-56345436%2FFunctions%2F769193423" anchor-label="isBeforeMonth" id="-56345436%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-56345436%2FFunctions%2F-251573632" anchor-label="isBeforeMonth" id="-56345436%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-before-month.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span><span>Month</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-56345436%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-56345436%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-month.html"><span class="token function">isBeforeMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-month.html"><span class="token function">isBeforeMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="930944657%2FFunctions%2F769193423" anchor-label="isBeforeTime" id="930944657%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="930944657%2FFunctions%2F-251573632" anchor-label="isBeforeTime" id="930944657%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-before-time.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="930944657%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="930944657%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-time.html"><span class="token function">isBeforeTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-time.html"><span class="token function">isBeforeTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="425485089%2FFunctions%2F769193423" anchor-label="isBeforeYear" id="425485089%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="425485089%2FFunctions%2F-251573632" anchor-label="isBeforeYear" id="425485089%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-before-year.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span><span>Year</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="425485089%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="425485089%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-year.html"><span class="token function">isBeforeYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-before-year.html"><span class="token function">isBeforeYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-877908683%2FFunctions%2F769193423" anchor-label="isEqualDay" id="-877908683%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-877908683%2FFunctions%2F-251573632" anchor-label="isEqualDay" id="-877908683%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-equal-day.html"><span>is</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Day</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-877908683%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-877908683%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-equal-day.html"><span class="token function">isEqualDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-equal-day.html"><span class="token function">isEqualDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="107495889%2FFunctions%2F769193423" anchor-label="isEqualMonth" id="107495889%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="107495889%2FFunctions%2F-251573632" anchor-label="isEqualMonth" id="107495889%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-equal-month.html"><span>is</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Month</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="107495889%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="107495889%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-equal-month.html"><span class="token function">isEqualMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-equal-month.html"><span class="token function">isEqualMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-172148796%2FFunctions%2F769193423" anchor-label="isEqualTime" id="-172148796%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-172148796%2FFunctions%2F-251573632" anchor-label="isEqualTime" id="-172148796%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-equal-time.html"><span>is</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-172148796%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-172148796%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-equal-time.html"><span class="token function">isEqualTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-equal-time.html"><span class="token function">isEqualTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">b<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-677608364%2FFunctions%2F769193423" anchor-label="isEqualYear" id="-677608364%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-677608364%2FFunctions%2F-251573632" anchor-label="isEqualYear" id="-677608364%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-equal-year.html"><span>is</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Year</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-677608364%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-677608364%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-equal-year.html"><span class="token function">isEqualYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-equal-year.html"><span class="token function">isEqualYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="895082686%2FFunctions%2F769193423" anchor-label="isInLeapYear" id="895082686%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="895082686%2FFunctions%2F-251573632" anchor-label="isInLeapYear" id="895082686%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="is-in-leap-year.html"><span>is</span><wbr></wbr><span>In</span><wbr></wbr><span>Leap</span><wbr></wbr><span><span>Year</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="895082686%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="895082686%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-in-leap-year.html"><span class="token function">isInLeapYear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="is-in-leap-year.html"><span class="token function">isInLeapYear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1742077508%2FFunctions%2F769193423" anchor-label="print" id="1742077508%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1742077508%2FFunctions%2F-251573632" anchor-label="print" id="1742077508%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="print.html"><span><span>print</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1742077508%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1742077508%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="print.html"><span class="token function">print</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">format<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">locale<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html">Locale</a><span class="token operator"> = </span>Locale.US</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="print.html"><span class="token function">print</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">format<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">locale<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Locale.html">Locale</a><span class="token operator"> = </span>Locale.US</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1155862465%2FFunctions%2F769193423" anchor-label="toLocalDateTime" id="1155862465%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1294202547%2FFunctions%2F-251573632" anchor-label="toLocalDateTime" id="-1294202547%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="to-local-date-time.html"><span>to</span><wbr></wbr><span>Local</span><wbr></wbr><span>Date</span><wbr></wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1155862465%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1294202547%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="to-local-date-time.html"><span class="token function">toLocalDateTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>formats<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Works off of String representations of dateTime and parses through the following attempts in order when no format is present:</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="to-local-date-time.html"><span class="token function">toLocalDateTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>formats<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Works off of String representations of dateTime and parses through the following attempts in order when no format is present:</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-2004899241%2FFunctions%2F769193423" anchor-label="withLocalTime" id="-2004899241%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2004899241%2FFunctions%2F-251573632" anchor-label="withLocalTime" id="-2004899241%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="with-local-time.html"><span>with</span><wbr></wbr><span>Local</span><wbr></wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2004899241%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2004899241%2FFunctions%2F-251573632"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="with-local-time.html"><span class="token function">withLocalTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localTime<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html">LocalTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a><span class="token punctuation">.</span><a href="with-local-time.html"><span class="token function">withLocalTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">localTime<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalTime.html">LocalTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html">LocalDateTime</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -781,13 +824,22 @@
     </div>
   </div>
 </div>
-      <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span
-                class="pull-right"><span>Generated by </span><a
-                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-      </div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
