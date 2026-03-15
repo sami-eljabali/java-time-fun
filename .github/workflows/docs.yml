@@ -16,10 +16,10 @@ jobs:
         uses: actions/setup-java@v5
         with:
           java-version: 21
-          distribution: 'adopt'
+          distribution: 'temurin'
 
       - name: Build documentation
-        run: ./gradlew dokkaHtml
+        run: ./gradlew dokkaGeneratePublicationHtml
 
       - name: Publish documentation
         uses: JamesIves/github-pages-deploy-action@releases/v4
