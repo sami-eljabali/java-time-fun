@@ -19,7 +19,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build documentation
-        run: ./gradlew dokkaHtml
+        run: ./gradlew dokkaGeneratePublicationHtml
 
       - name: Publish documentation
         uses: JamesIves/github-pages-deploy-action@releases/v4

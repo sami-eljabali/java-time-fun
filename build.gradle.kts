@@ -27,8 +27,8 @@ tasks.getByName<Test>("test") {
 
 tasks{
     register<Jar>("dokkaJar") {
-        from(dokkaHtml)
-        dependsOn(dokkaHtml)
+        dependsOn(dokkaGeneratePublicationHtml)
+        from(dokkaGeneratePublicationHtml.flatMap { it.outputDirectory })
         archiveClassifier.set("javadoc")
     }
     withType<Jar> {
