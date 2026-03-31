@@ -3,7 +3,7 @@
  </p>
  
 <h1 align="center">Java Time Fun</h1>
-<p align="center">Java Time Kotlin extension functions.</p>
+<p align="center">Every java.time extension function you'll ever need.</p>
 <p align="center">
   <a href="https://github.com/sami-eljabali/java-time-fun/actions?query=branch%3Amain"><img alt="Build Status" src="https://github.com/sami-eljabali/java-time-fun/actions/workflows/main.yml/badge.svg"/></a> 
   <a href="https://repo1.maven.org/maven2/org/eljabali/sami/javatimefun/javatimefun/"><img alt="Maven Central" src="https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Forg%2Feljabali%2Fsami%2Fjavatimefun%2Fjavatimefun%2Fmaven-metadata.xml"/></a> 
