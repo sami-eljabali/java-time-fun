@@ -5,7 +5,12 @@ import java.time.DayOfWeek
 import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.ZoneId
+import java.time.temporal.ChronoUnit
 import java.time.temporal.TemporalAdjusters
+
+fun LocalDateTime.plusMillis(millis: Long): LocalDateTime = this.plus(millis, ChronoUnit.MILLIS)
+
+fun LocalDateTime.minusMillis(millis: Long): LocalDateTime = this.minus(millis, ChronoUnit.MILLIS)
 
 fun LocalDateTime.atStartOfDay(): LocalDateTime = this.withLocalTime(LocalTime.MIN)
 
