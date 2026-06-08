@@ -3,7 +3,22 @@ package javatimefun.zoneddatetime.extensions
 import java.time.DayOfWeek
 import java.time.LocalTime
 import java.time.ZonedDateTime
+import java.time.temporal.ChronoUnit
 import java.time.temporal.TemporalAdjusters
+
+/**
+ * Works off of ZonedDateTime context.
+ * @param millis  Number of milliseconds to add (may be negative).
+ * @return  ZonedDateTime advanced by the given milliseconds.
+ */
+fun ZonedDateTime.plusMillis(millis: Long): ZonedDateTime = this.plus(millis, ChronoUnit.MILLIS)
+
+/**
+ * Works off of ZonedDateTime context.
+ * @param millis  Number of milliseconds to subtract (may be negative).
+ * @return  ZonedDateTime moved back by the given milliseconds.
+ */
+fun ZonedDateTime.minusMillis(millis: Long): ZonedDateTime = this.minus(millis, ChronoUnit.MILLIS)
 
 /**
  * Works off of ZonedDateTime context.

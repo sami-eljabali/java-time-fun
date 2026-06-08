@@ -6,11 +6,47 @@ import javatimefun.localdatetime.extensions.atStartOfMonth
 import javatimefun.localdatetime.extensions.fromUtcToZone
 import javatimefun.localdatetime.extensions.fromZoneToUtc
 import javatimefun.localdatetime.extensions.fromZoneToZone
+import javatimefun.localdatetime.extensions.minusMillis
+import javatimefun.localdatetime.extensions.plusMillis
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import java.time.LocalDateTime
 
 class LocalDateTimeMutatingTest {
+    @Test
+    fun `plusMillis adds milliseconds as nanos`() {
+        val dateTime = LocalDateTime.of(2025, 6, 15, 12, 0, 0, 0)
+        val result = dateTime.plusMillis(500)
+
+        assertEquals(12, result.hour)
+        assertEquals(0, result.minute)
+        assertEquals(0, result.second)
+        assertEquals(500_000_000, result.nano)
+    }
+
+    @Test
+    fun `plusMillis rolls over into the next second`() {
+        val dateTime = LocalDateTime.of(2025, 6, 15, 12, 0, 0, 800_000_000)
+        val result = dateTime.plusMillis(500)
+
+        assertEquals(1, result.second)
+        assertEquals(300_000_000, result.nano)
+    }
+
+    @Test
+    fun `minusMillis is the inverse of plusMillis`() {
+        val dateTime = LocalDateTime.of(2025, 6, 15, 12, 0, 0, 0)
+
+        assertEquals(dateTime, dateTime.plusMillis(750).minusMillis(750))
+    }
+
+    @Test
+    fun `plusMillis with negative argument behaves like minusMillis`() {
+        val dateTime = LocalDateTime.of(2025, 6, 15, 12, 0, 0, 0)
+
+        assertEquals(dateTime.minusMillis(250), dateTime.plusMillis(-250))
+    }
+
     @Test
     fun `atStartOfMonth sets time to first day of month at start of day`() {
         val dateTime = LocalDateTime.of(2025, 6, 15, 12, 30)

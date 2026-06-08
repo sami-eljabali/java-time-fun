@@ -14,6 +14,8 @@ import javatimefun.zoneddatetime.extensions.withLocalTime
 import javatimefun.zoneddatetime.extensions.atStartOfMonth
 import javatimefun.zoneddatetime.extensions.atEndOfMonth
 import javatimefun.zoneddatetime.extensions.atStartOfDay
+import javatimefun.zoneddatetime.extensions.minusMillis
+import javatimefun.zoneddatetime.extensions.plusMillis
 import java.time.DayOfWeek
 import java.time.LocalTime
 
@@ -21,6 +23,53 @@ class ZonedDateTimeMutatingExtensionsTest {
 
     companion object {
         private const val HH_MM_SS_AM = "hh:mm:ss a"
+    }
+
+    @Test
+    fun `given date, when adding milliseconds, then should advance nanos`() {
+        // given
+        val date = ZonedDateTimeFactory.new(2025, 6, 15, hourIn24 = 12)
+
+        // when
+        val result = date.plusMillis(500)
+
+        // then
+        Assertions.assertEquals(0, result.second)
+        Assertions.assertEquals(500_000_000, result.nano)
+    }
+
+    @Test
+    fun `given date near a second boundary, when adding milliseconds, then should roll over`() {
+        // given
+        val date = ZonedDateTimeFactory.new(2025, 6, 15, hourIn24 = 12, nano = 800_000_000)
+
+        // when
+        val result = date.plusMillis(500)
+
+        // then
+        Assertions.assertEquals(1, result.second)
+        Assertions.assertEquals(300_000_000, result.nano)
+    }
+
+    @Test
+    fun `given date, when subtracting after adding milliseconds, then should return original`() {
+        // given
+        val date = ZonedDateTimeFactory.new(2025, 6, 15, hourIn24 = 12)
+
+        // when
+        val result = date.plusMillis(750).minusMillis(750)
+
+        // then
+        Assertions.assertEquals(date, result)
+    }
+
+    @Test
+    fun `given date, when adding negative milliseconds, then should behave like minusMillis`() {
+        // given
+        val date = ZonedDateTimeFactory.new(2025, 6, 15, hourIn24 = 12)
+
+        // when & then
+        Assertions.assertEquals(date.minusMillis(250), date.plusMillis(-250))
     }
 
     @Test
