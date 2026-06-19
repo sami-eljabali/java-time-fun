@@ -2,7 +2,6 @@ package javatimefun.period.extensions
 
 import java.time.Period
 
-// ponytail: days/weeks/months/years are calendar units (variable real length), so Period not Duration.
 val Int.days: Period get() = Period.ofDays(this)
 val Int.weeks: Period get() = Period.ofWeeks(this)
 val Int.months: Period get() = Period.ofMonths(this)
