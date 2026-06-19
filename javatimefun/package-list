@@ -10,6 +10,22 @@ $dokka.location:javatimefun.date.extensions//toLocalDate/java.util.Date#java.tim
 $dokka.location:javatimefun.date.extensions//toLocalDateTime/java.util.Date#java.time.ZoneId/PointingToDeclaration/javatimefun/javatimefun.date.extensions/to-local-date-time.html
 $dokka.location:javatimefun.date.extensions//toLocalTime/java.util.Date#java.time.ZoneId/PointingToDeclaration/javatimefun/javatimefun.date.extensions/to-local-time.html
 $dokka.location:javatimefun.date.extensions//toZonedDateTime/java.util.Date#java.time.ZoneId/PointingToDeclaration/javatimefun/javatimefun.date.extensions/to-zoned-date-time.html
+$dokka.location:javatimefun.duration.extensions////PointingToDeclaration/javatimefun/javatimefun.duration.extensions/index.html
+$dokka.location:javatimefun.duration.extensions//div/java.time.Duration#kotlin.Long/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/div.html
+$dokka.location:javatimefun.duration.extensions//hours/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/hours.html
+$dokka.location:javatimefun.duration.extensions//hours/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/hours.html
+$dokka.location:javatimefun.duration.extensions//microseconds/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/microseconds.html
+$dokka.location:javatimefun.duration.extensions//microseconds/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/microseconds.html
+$dokka.location:javatimefun.duration.extensions//milliseconds/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/milliseconds.html
+$dokka.location:javatimefun.duration.extensions//milliseconds/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/milliseconds.html
+$dokka.location:javatimefun.duration.extensions//minutes/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/minutes.html
+$dokka.location:javatimefun.duration.extensions//minutes/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/minutes.html
+$dokka.location:javatimefun.duration.extensions//nanoseconds/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/nanoseconds.html
+$dokka.location:javatimefun.duration.extensions//nanoseconds/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/nanoseconds.html
+$dokka.location:javatimefun.duration.extensions//seconds/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/seconds.html
+$dokka.location:javatimefun.duration.extensions//seconds/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/seconds.html
+$dokka.location:javatimefun.duration.extensions//times/java.time.Duration#kotlin.Long/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/times.html
+$dokka.location:javatimefun.duration.extensions//unaryMinus/java.time.Duration#/PointingToDeclaration/javatimefun/javatimefun.duration.extensions/unary-minus.html
 $dokka.location:javatimefun.localdate.extensions////PointingToDeclaration/javatimefun/javatimefun.localdate.extensions/index.html
 $dokka.location:javatimefun.localdate.extensions//atEndOfDay/java.time.LocalDate#/PointingToDeclaration/javatimefun/javatimefun.localdate.extensions/at-end-of-day.html
 $dokka.location:javatimefun.localdate.extensions//atEndOfMonth/java.time.LocalDate#/PointingToDeclaration/javatimefun/javatimefun.localdate.extensions/at-end-of-month.html
@@ -172,6 +188,17 @@ $dokka.location:javatimefun.localtime/LocalTimes///PointingToDeclaration/javati
 $dokka.location:javatimefun.localtime/LocalTimes/endOfDay/#/PointingToDeclaration/javatimefun/javatimefun.localtime/-local-times/end-of-day.html
 $dokka.location:javatimefun.localtime/LocalTimes/noon/#/PointingToDeclaration/javatimefun/javatimefun.localtime/-local-times/noon.html
 $dokka.location:javatimefun.localtime/LocalTimes/startOfDay/#/PointingToDeclaration/javatimefun/javatimefun.localtime/-local-times/start-of-day.html
+$dokka.location:javatimefun.period.extensions////PointingToDeclaration/javatimefun/javatimefun.period.extensions/index.html
+$dokka.location:javatimefun.period.extensions//days/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/days.html
+$dokka.location:javatimefun.period.extensions//days/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/days.html
+$dokka.location:javatimefun.period.extensions//months/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/months.html
+$dokka.location:javatimefun.period.extensions//months/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/months.html
+$dokka.location:javatimefun.period.extensions//times/java.time.Period#kotlin.Int/PointingToDeclaration/javatimefun/javatimefun.period.extensions/times.html
+$dokka.location:javatimefun.period.extensions//unaryMinus/java.time.Period#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/unary-minus.html
+$dokka.location:javatimefun.period.extensions//weeks/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/weeks.html
+$dokka.location:javatimefun.period.extensions//weeks/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/weeks.html
+$dokka.location:javatimefun.period.extensions//years/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/years.html
+$dokka.location:javatimefun.period.extensions//years/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/years.html
 $dokka.location:javatimefun.zoneddatetime.extensions////PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/index.html
 $dokka.location:javatimefun.zoneddatetime.extensions//atEndOfDay/java.time.ZonedDateTime#/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/at-end-of-day.html
 $dokka.location:javatimefun.zoneddatetime.extensions//atEndOfMonth/java.time.ZonedDateTime#/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/at-end-of-month.html
@@ -710,11 +737,13 @@ $dokka.location:javatimefun/ZoneIds/ZULU/#/PointingToDeclaration/javatimefun/ja
 javatimefun
 javatimefun.calendar.extensions
 javatimefun.date.extensions
+javatimefun.duration.extensions
 javatimefun.localdate
 javatimefun.localdate.extensions
 javatimefun.localdatetime
 javatimefun.localdatetime.extensions
 javatimefun.localtime
 javatimefun.localtime.extensions
+javatimefun.period.extensions
 javatimefun.zoneddatetime
 javatimefun.zoneddatetime.extensions
