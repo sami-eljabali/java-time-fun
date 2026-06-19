@@ -23,6 +23,9 @@
 - if (ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now()) < 18) {
 + if (dateOfBirth.getYearDifference(LocalDates.today) < 18) {
 
+- delay(Duration.of(200, ChronoUnit.MILLIS))
++ delay(200.milliseconds)
+
 - val zoneId = ZoneId.of("America/Los_Angeles")
 + val zoneId = ZoneIds.AMERICA_LOS_ANGELES
 ```
@@ -94,6 +97,15 @@ val result = date.atStartOfDay()
 val result = date.atStartOfMonth()
 val result = date.getLast(DayOfWeek.FRIDAY)
 val result = date.getNext(DayOfWeek.MONDAY)
+```
+
+### Durations & Periods
+_Build `Duration` (sub-day, fixed length) and `Period` (calendar units) easily_
+```kotlin
+val result = 500.milliseconds
+val result = 2.seconds * 3
+val result = 2.weeks
+val result = LocalDate.now() + 3.months
 ```
 
 ### Preset Dates
