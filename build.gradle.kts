@@ -62,15 +62,15 @@ publishing {
                 }
                 developers {
                     developer {
-                        id.set("seljabali")
+                        id.set("sami-eljabali")
                         name.set("Sami Eljabali")
                         email.set("sami@eljabali.org")
                         url.set("sami.eljabali.org")
                     }
                 }
                 scm {
-                    connection.set("scm:git:git://github.com/seljabali/java-time-fun.git")
-                    developerConnection.set("scm:git:ssh://github.com/seljabali/java-time-fun.git")
+                    connection.set("scm:git:git://github.com/sami-eljabali/java-time-fun.git")
+                    developerConnection.set("scm:git:ssh://github.com/sami-eljabali/java-time-fun.git")
                     url.set("https://github.com/sami-eljabali/java-time-fun/tree/main")
                 }
             }
