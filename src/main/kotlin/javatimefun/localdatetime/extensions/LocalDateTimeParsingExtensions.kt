@@ -1,8 +1,7 @@
 package javatimefun.localdatetime.extensions
 
+import javatimefun.parseOrNull
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-import java.time.format.DateTimeParseException
 
 private const val flexibleIso8601Format = "yyyy-MM-dd'T'HH:mm:ss[.SSSSSS][.SSSSS][.SSSS][.SSS][.SS][.S]['Z']"
 
@@ -20,27 +19,8 @@ private const val flexibleIso8601Format = "yyyy-MM-dd'T'HH:mm:ss[.SSSSSS][.SSSSS
  * @return LocalDateTime? Null means couldn't parse, else parsed LocalDateTime.
  */
 fun String.toLocalDateTime(vararg formats: String?): LocalDateTime? =
-    if (formats.isEmpty()) {
-        parseLocalDateTimeOrNull(this) ?: parseLocalDateTimeOrNull(this, flexibleIso8601Format)
-    } else {
-        formats.firstNotNullOfOrNull { format -> parseLocalDateTimeOrNull(this, format) }
-    }
-
-private fun parseLocalDateTimeOrNull(dateText: String, format: String? = null): LocalDateTime? =
-    if (format.isNullOrEmpty())
-        try {
-            LocalDateTime.parse(dateText)
-        } catch (e: DateTimeParseException) {
-            null
-        } catch (e: IllegalArgumentException) {
-            null
-        }
-    else {
-        try {
-            LocalDateTime.parse(dateText, DateTimeFormatter.ofPattern(format))
-        } catch (e: DateTimeParseException) {
-            null
-        } catch (e: IllegalArgumentException) {
-            null
-        }
-    }
+    parseOrNull(
+        formats.ifEmpty { arrayOf(null, flexibleIso8601Format) }, // null = default ISO parser
+        { LocalDateTime.parse(it) },
+        { text, formatter -> LocalDateTime.parse(text, formatter) },
+    )

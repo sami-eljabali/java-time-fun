@@ -1,8 +1,7 @@
 package javatimefun.localdate.extensions
 
+import javatimefun.parseOrNull
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.time.format.DateTimeParseException
 
 /**
  * Works off of String representations of date, without time, nor time zone.
@@ -13,27 +12,4 @@ import java.time.format.DateTimeParseException
  * @return LocalDate? Null means couldn't parse, else parsed LocalDate.
  */
 fun String.toLocalDate(vararg formats: String?): LocalDate? =
-    if (formats.isEmpty()) {
-        parseLocalDateOrNull(this)
-    } else {
-        formats.firstNotNullOfOrNull { format -> parseLocalDateOrNull(this, format) }
-    }
-
-private fun parseLocalDateOrNull(dateText: String, format: String? = null): LocalDate? =
-    if (format.isNullOrEmpty()) {
-        try {
-            LocalDate.parse(dateText)
-        } catch (e: DateTimeParseException) {
-            null
-        } catch (e: IllegalArgumentException) {
-            null
-        }
-    } else {
-        try {
-            LocalDate.parse(dateText, DateTimeFormatter.ofPattern(format))
-        } catch (e: DateTimeParseException) {
-            null
-        } catch (e: IllegalArgumentException) {
-            null
-        }
-    }
+    parseOrNull(formats, { LocalDate.parse(it) }, { text, formatter -> LocalDate.parse(text, formatter) })

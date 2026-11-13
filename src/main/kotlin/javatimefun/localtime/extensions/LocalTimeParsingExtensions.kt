@@ -1,31 +1,15 @@
 package javatimefun.localtime.extensions
 
+import javatimefun.parseOrNull
 import java.time.LocalTime
-import java.time.format.DateTimeFormatter
-import java.time.format.DateTimeParseException
 
+/**
+ * Works off of String representations of time, without date, nor time zone.
+ * When formats are provided, each format is attempted in-order until one succeeds.
+ *
+ * @param this String representation of LocalTime.
+ * @param formats String? vararg of formats to attempt when parsing.
+ * @return LocalTime? Null means couldn't parse, else parsed LocalTime.
+ */
 fun String.toLocalTime(vararg formats: String?): LocalTime? =
-    if (formats.isEmpty()) {
-        parseLocalTimeOrNull(this)
-    } else {
-        formats.firstNotNullOfOrNull { format -> parseLocalTimeOrNull(this, format) }
-    }
-
-private fun parseLocalTimeOrNull(timeText: String, format: String? = null): LocalTime? =
-    if (format.isNullOrEmpty()) {
-        try {
-            LocalTime.parse(timeText)
-        } catch (e: DateTimeParseException) {
-            null
-        } catch (e: IllegalArgumentException) {
-            null
-        }
-    } else {
-        try {
-            LocalTime.parse(timeText, DateTimeFormatter.ofPattern(format))
-        } catch (e: DateTimeParseException) {
-            null
-        } catch (e: IllegalArgumentException) {
-            null
-        }
-    }
+    parseOrNull(formats, { LocalTime.parse(it) }, { text, formatter -> LocalTime.parse(text, formatter) })
