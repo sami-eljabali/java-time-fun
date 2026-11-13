@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>javatimefun.offsetdatetime.extensions</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../index.html" tabindex="1">
+                    javatimefun
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+4.1.1        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":/main"
+                                       data-filter=":/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    javatimefun
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="javatimefun::javatimefun.offsetdatetime.extensions////PointingToDeclaration//-251573632">
+  <div class="breadcrumbs"><a href="../../index.html">javatimefun</a><span class="delimiter">/</span><span class="current">javatimefun.offsetdatetime.extensions</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="471346928%2FFunctions%2F-251573632" anchor-label="compareDay" id="471346928%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="compare-day.html"><span>compare</span><wbr></wbr><span><span>Day</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="471346928%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="compare-day.html"><span class="token function">compareDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1980006196%2FFunctions%2F-251573632" anchor-label="compareMonth" id="-1980006196%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="compare-month.html"><span>compare</span><wbr></wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1980006196%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="compare-month.html"><span class="token function">compareMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-710958751%2FFunctions%2F-251573632" anchor-label="compareTime" id="-710958751%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="compare-time.html"><span>compare</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-710958751%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="compare-time.html"><span class="token function">compareTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1126299151%2FFunctions%2F-251573632" anchor-label="compareYear" id="-1126299151%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="compare-year.html"><span>compare</span><wbr></wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1126299151%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="compare-year.html"><span class="token function">compareYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-226920668%2FFunctions%2F-251573632" anchor-label="getDayDifference" id="-226920668%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-day-difference.html"><span>get</span><wbr></wbr><span>Day</span><wbr></wbr><span><span>Difference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-226920668%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="get-day-difference.html"><span class="token function">getDayDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="948843676%2FFunctions%2F-251573632" anchor-label="getHourDifference" id="948843676%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-hour-difference.html"><span>get</span><wbr></wbr><span>Hour</span><wbr></wbr><span><span>Difference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="948843676%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="get-hour-difference.html"><span class="token function">getHourDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1937612396%2FFunctions%2F-251573632" anchor-label="getMinuteDifference" id="1937612396%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-minute-difference.html"><span>get</span><wbr></wbr><span>Minute</span><wbr></wbr><span><span>Difference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1937612396%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="get-minute-difference.html"><span class="token function">getMinuteDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1340949056%2FFunctions%2F-251573632" anchor-label="getMonthDifference" id="-1340949056%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-month-difference.html"><span>get</span><wbr></wbr><span>Month</span><wbr></wbr><span><span>Difference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1340949056%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="get-month-difference.html"><span class="token function">getMonthDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1730192396%2FFunctions%2F-251573632" anchor-label="getSecondDifference" id="1730192396%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-second-difference.html"><span>get</span><wbr></wbr><span>Second</span><wbr></wbr><span><span>Difference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1730192396%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="get-second-difference.html"><span class="token function">getSecondDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2025927075%2FFunctions%2F-251573632" anchor-label="getYearDifference" id="2025927075%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-year-difference.html"><span>get</span><wbr></wbr><span>Year</span><wbr></wbr><span><span>Difference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2025927075%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="get-year-difference.html"><span class="token function">getYearDifference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-790871715%2FFunctions%2F-251573632" anchor-label="isAfterDay" id="-790871715%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-after-day.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span><span>Day</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-790871715%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-after-day.html"><span class="token function">isAfterDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="294238201%2FFunctions%2F-251573632" anchor-label="isAfterEqualDay" id="294238201%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-after-equal-day.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Day</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="294238201%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-day.html"><span class="token function">isAfterEqualDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-382801003%2FFunctions%2F-251573632" anchor-label="isAfterEqualMonth" id="-382801003%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-after-equal-month.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-382801003%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-month.html"><span class="token function">isAfterEqualMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1906361992%2FFunctions%2F-251573632" anchor-label="isAfterEqualTime" id="-1906361992%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-after-equal-time.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1906361992%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-time.html"><span class="token function">isAfterEqualTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1973264904%2FFunctions%2F-251573632" anchor-label="isAfterEqualYear" id="1973264904%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-after-equal-year.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1973264904%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-after-equal-year.html"><span class="token function">isAfterEqualYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="503622649%2FFunctions%2F-251573632" anchor-label="isAfterMonth" id="503622649%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-after-month.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="503622649%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-after-month.html"><span class="token function">isAfterMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1185031020%2FFunctions%2F-251573632" anchor-label="isAfterTime" id="-1185031020%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-after-time.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1185031020%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-after-time.html"><span class="token function">isAfterTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1600371420%2FFunctions%2F-251573632" anchor-label="isAfterYear" id="-1600371420%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-after-year.html"><span>is</span><wbr></wbr><span>After</span><wbr></wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1600371420%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-after-year.html"><span class="token function">isAfterYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1357218368%2FFunctions%2F-251573632" anchor-label="isBeforeDay" id="1357218368%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-before-day.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span><span>Day</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1357218368%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-before-day.html"><span class="token function">isBeforeDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-391869194%2FFunctions%2F-251573632" anchor-label="isBeforeEqualDay" id="-391869194%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-before-equal-day.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Day</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-391869194%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-day.html"><span class="token function">isBeforeEqualDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1692955986%2FFunctions%2F-251573632" anchor-label="isBeforeEqualMonth" id="1692955986%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-before-equal-month.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1692955986%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-month.html"><span class="token function">isBeforeEqualMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1700854757%2FFunctions%2F-251573632" anchor-label="isBeforeEqualTime" id="-1700854757%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-before-equal-time.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1700854757%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-time.html"><span class="token function">isBeforeEqualTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2116195157%2FFunctions%2F-251573632" anchor-label="isBeforeEqualYear" id="-2116195157%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-before-equal-year.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2116195157%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-before-equal-year.html"><span class="token function">isBeforeEqualYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1061076964%2FFunctions%2F-251573632" anchor-label="isBeforeMonth" id="-1061076964%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-before-month.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1061076964%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-before-month.html"><span class="token function">isBeforeMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="981252113%2FFunctions%2F-251573632" anchor-label="isBeforeTime" id="981252113%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-before-time.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="981252113%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-before-time.html"><span class="token function">isBeforeTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="565911713%2FFunctions%2F-251573632" anchor-label="isBeforeYear" id="565911713%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-before-year.html"><span>is</span><wbr></wbr><span>Before</span><wbr></wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="565911713%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-before-year.html"><span class="token function">isBeforeYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2055446197%2FFunctions%2F-251573632" anchor-label="isEqualDay" id="2055446197%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-equal-day.html"><span>is</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Day</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2055446197%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-equal-day.html"><span class="token function">isEqualDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-79031471%2FFunctions%2F-251573632" anchor-label="isEqualMonth" id="-79031471%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-equal-month.html"><span>is</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-79031471%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-equal-month.html"><span class="token function">isEqualMonth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1151478332%2FFunctions%2F-251573632" anchor-label="isEqualTime" id="1151478332%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-equal-time.html"><span>is</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1151478332%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-equal-time.html"><span class="token function">isEqualTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="736137932%2FFunctions%2F-251573632" anchor-label="isEqualYear" id="736137932%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-equal-year.html"><span>is</span><wbr></wbr><span>Equal</span><wbr></wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="736137932%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="is-equal-year.html"><span class="token function">isEqualYear</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetDateTimeB<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2143961610%2FFunctions%2F-251573632" anchor-label="print" id="2143961610%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="print.html"><span><span>print</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2143961610%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token punctuation">.</span><a href="print.html"><span class="token function">print</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">format<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">locale<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Locale.html">Locale</a><span class="token operator"> = </span>Locale.US</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-784977107%2FFunctions%2F-251573632" anchor-label="toOffsetDateTime" id="-784977107%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-offset-date-time.html"><span>to</span><wbr></wbr><span>Offset</span><wbr></wbr><span>Date</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-784977107%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="to-offset-date-time.html"><span class="token function">toOffsetDateTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>formats<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/OffsetDateTime.html">OffsetDateTime</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Works off of String representations of OffsetDateTime (ISO default: &quot;2024-11-15T12:34:56+01:00&quot;). When formats are provided, each format is attempted in-order until one succeeds.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

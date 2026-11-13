@@ -188,6 +188,42 @@ $dokka.location:javatimefun.localtime/LocalTimes///PointingToDeclaration/javati
 $dokka.location:javatimefun.localtime/LocalTimes/endOfDay/#/PointingToDeclaration/javatimefun/javatimefun.localtime/-local-times/end-of-day.html
 $dokka.location:javatimefun.localtime/LocalTimes/noon/#/PointingToDeclaration/javatimefun/javatimefun.localtime/-local-times/noon.html
 $dokka.location:javatimefun.localtime/LocalTimes/startOfDay/#/PointingToDeclaration/javatimefun/javatimefun.localtime/-local-times/start-of-day.html
+$dokka.location:javatimefun.monthday.extensions////PointingToDeclaration/javatimefun/javatimefun.monthday.extensions/index.html
+$dokka.location:javatimefun.monthday.extensions//print/java.time.MonthDay#kotlin.String#java.util.Locale/PointingToDeclaration/javatimefun/javatimefun.monthday.extensions/print.html
+$dokka.location:javatimefun.monthday.extensions//toMonthDay/kotlin.String#vararg(kotlin.String?)/PointingToDeclaration/javatimefun/javatimefun.monthday.extensions/to-month-day.html
+$dokka.location:javatimefun.offsetdatetime.extensions////PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/index.html
+$dokka.location:javatimefun.offsetdatetime.extensions//compareDay/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/compare-day.html
+$dokka.location:javatimefun.offsetdatetime.extensions//compareMonth/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/compare-month.html
+$dokka.location:javatimefun.offsetdatetime.extensions//compareTime/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/compare-time.html
+$dokka.location:javatimefun.offsetdatetime.extensions//compareYear/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/compare-year.html
+$dokka.location:javatimefun.offsetdatetime.extensions//getDayDifference/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/get-day-difference.html
+$dokka.location:javatimefun.offsetdatetime.extensions//getHourDifference/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/get-hour-difference.html
+$dokka.location:javatimefun.offsetdatetime.extensions//getMinuteDifference/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/get-minute-difference.html
+$dokka.location:javatimefun.offsetdatetime.extensions//getMonthDifference/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/get-month-difference.html
+$dokka.location:javatimefun.offsetdatetime.extensions//getSecondDifference/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/get-second-difference.html
+$dokka.location:javatimefun.offsetdatetime.extensions//getYearDifference/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/get-year-difference.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isAfterDay/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-after-day.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isAfterEqualDay/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-after-equal-day.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isAfterEqualMonth/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-after-equal-month.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isAfterEqualTime/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-after-equal-time.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isAfterEqualYear/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-after-equal-year.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isAfterMonth/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-after-month.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isAfterTime/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-after-time.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isAfterYear/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-after-year.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isBeforeDay/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-before-day.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isBeforeEqualDay/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-before-equal-day.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isBeforeEqualMonth/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-before-equal-month.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isBeforeEqualTime/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-before-equal-time.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isBeforeEqualYear/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-before-equal-year.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isBeforeMonth/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-before-month.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isBeforeTime/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-before-time.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isBeforeYear/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-before-year.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isEqualDay/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-equal-day.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isEqualMonth/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-equal-month.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isEqualTime/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-equal-time.html
+$dokka.location:javatimefun.offsetdatetime.extensions//isEqualYear/java.time.OffsetDateTime#java.time.OffsetDateTime/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/is-equal-year.html
+$dokka.location:javatimefun.offsetdatetime.extensions//print/java.time.OffsetDateTime#kotlin.String#java.util.Locale/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/print.html
+$dokka.location:javatimefun.offsetdatetime.extensions//toOffsetDateTime/kotlin.String#vararg(kotlin.String?)/PointingToDeclaration/javatimefun/javatimefun.offsetdatetime.extensions/to-offset-date-time.html
 $dokka.location:javatimefun.period.extensions////PointingToDeclaration/javatimefun/javatimefun.period.extensions/index.html
 $dokka.location:javatimefun.period.extensions//days/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/days.html
 $dokka.location:javatimefun.period.extensions//days/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/days.html
@@ -199,6 +235,12 @@ $dokka.location:javatimefun.period.extensions//weeks/kotlin.Int#/PointingToDecla
 $dokka.location:javatimefun.period.extensions//weeks/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/weeks.html
 $dokka.location:javatimefun.period.extensions//years/kotlin.Int#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/years.html
 $dokka.location:javatimefun.period.extensions//years/kotlin.Long#/PointingToDeclaration/javatimefun/javatimefun.period.extensions/years.html
+$dokka.location:javatimefun.year.extensions////PointingToDeclaration/javatimefun/javatimefun.year.extensions/index.html
+$dokka.location:javatimefun.year.extensions//print/java.time.Year#kotlin.String#java.util.Locale/PointingToDeclaration/javatimefun/javatimefun.year.extensions/print.html
+$dokka.location:javatimefun.year.extensions//toYear/kotlin.String#vararg(kotlin.String?)/PointingToDeclaration/javatimefun/javatimefun.year.extensions/to-year.html
+$dokka.location:javatimefun.yearmonth.extensions////PointingToDeclaration/javatimefun/javatimefun.yearmonth.extensions/index.html
+$dokka.location:javatimefun.yearmonth.extensions//print/java.time.YearMonth#kotlin.String#java.util.Locale/PointingToDeclaration/javatimefun/javatimefun.yearmonth.extensions/print.html
+$dokka.location:javatimefun.yearmonth.extensions//toYearMonth/kotlin.String#vararg(kotlin.String?)/PointingToDeclaration/javatimefun/javatimefun.yearmonth.extensions/to-year-month.html
 $dokka.location:javatimefun.zoneddatetime.extensions////PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/index.html
 $dokka.location:javatimefun.zoneddatetime.extensions//atEndOfDay/java.time.ZonedDateTime#/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/at-end-of-day.html
 $dokka.location:javatimefun.zoneddatetime.extensions//atEndOfMonth/java.time.ZonedDateTime#/PointingToDeclaration/javatimefun/javatimefun.zoneddatetime.extensions/at-end-of-month.html
@@ -744,6 +786,10 @@ javatimefun.localdatetime
 javatimefun.localdatetime.extensions
 javatimefun.localtime
 javatimefun.localtime.extensions
+javatimefun.monthday.extensions
+javatimefun.offsetdatetime.extensions
 javatimefun.period.extensions
+javatimefun.year.extensions
+javatimefun.yearmonth.extensions
 javatimefun.zoneddatetime
 javatimefun.zoneddatetime.extensions
