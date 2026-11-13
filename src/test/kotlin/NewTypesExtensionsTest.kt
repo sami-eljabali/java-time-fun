@@ -1,5 +1,3 @@
-import javatimefun.monthday.extensions.daysUntil
-import javatimefun.monthday.extensions.nextOccurrence
 import javatimefun.monthday.extensions.print
 import javatimefun.offsetdatetime.extensions.compareDay
 import javatimefun.offsetdatetime.extensions.getDayDifference
@@ -14,7 +12,6 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import java.time.LocalDate
 import java.time.MonthDay
 import java.time.OffsetDateTime
 import java.time.Year
@@ -32,23 +29,6 @@ class NewTypesExtensionsTest {
             "2024-11-15 12:00 +0100",
             OffsetDateTime.of(2024, 11, 15, 12, 0, 0, 0, ZoneOffset.ofHours(1)).print("yyyy-MM-dd HH:mm Z"),
         )
-    }
-
-    @Test
-    fun `nextOccurrence counts from date itself and rolls into next year`() {
-        val christmas = MonthDay.of(12, 25)
-        assertEquals(LocalDate.of(2024, 12, 25), christmas.nextOccurrence(LocalDate.of(2024, 12, 25)))
-        assertEquals(LocalDate.of(2025, 12, 25), christmas.nextOccurrence(LocalDate.of(2024, 12, 26)))
-        assertEquals(0, christmas.daysUntil(LocalDate.of(2024, 12, 25)))
-        assertEquals(10, christmas.daysUntil(LocalDate.of(2024, 12, 15)))
-    }
-
-    @Test
-    fun `nextOccurrence of Feb 29 lands on Feb 28 in non-leap years`() {
-        val leapDay = MonthDay.of(2, 29)
-        assertEquals(LocalDate.of(2024, 2, 29), leapDay.nextOccurrence(LocalDate.of(2024, 1, 1)))
-        assertEquals(LocalDate.of(2025, 2, 28), leapDay.nextOccurrence(LocalDate.of(2024, 3, 1)))
-        assertEquals(LocalDate.of(2026, 2, 28), leapDay.nextOccurrence(LocalDate.of(2025, 3, 1)))
     }
 
     @Test

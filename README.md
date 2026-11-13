@@ -105,9 +105,6 @@ val result = date.atStartOfDay()
 val result = date.atStartOfMonth()
 val result = date.getLast(DayOfWeek.FRIDAY)
 val result = date.getNext(DayOfWeek.MONDAY)
-
-val result = birthday.nextOccurrence() // MonthDay -> LocalDate
-val result = birthday.daysUntil()
 ```
 
 ### Durations & Periods
