@@ -1,8 +1,7 @@
 package javatimefun.zoneddatetime.extensions
 
+import javatimefun.parseOrNull
 import java.time.ZonedDateTime
-import java.time.format.DateTimeFormatter
-import java.time.format.DateTimeParseException
 
 /**
  * Works off of String representations of ZonedDateTime:
@@ -13,27 +12,4 @@ import java.time.format.DateTimeParseException
  * @return ZonedDateTime? Null means couldn't parse, else parsed ZonedDateTime.
  */
 fun String.toZonedDateTime(vararg formats: String?): ZonedDateTime? =
-    if (formats.isEmpty()) {
-        parseZonedDateTimeOrNull(this)
-    } else {
-        formats.firstNotNullOfOrNull { format -> parseZonedDateTimeOrNull(this, format) }
-    }
-
-private fun parseZonedDateTimeOrNull(dateText: String, format: String? = null): ZonedDateTime? =
-    if (format.isNullOrEmpty()) {
-        try {
-            ZonedDateTime.parse(dateText)
-        } catch (e: DateTimeParseException) {
-            null
-        } catch (e: IllegalArgumentException) {
-            null
-        }
-    } else {
-        try {
-            ZonedDateTime.parse(dateText, DateTimeFormatter.ofPattern(format))
-        } catch (e: DateTimeParseException) {
-            null
-        } catch (e: IllegalArgumentException) {
-            null
-        }
-    }
+    parseOrNull(formats, { ZonedDateTime.parse(it) }, { text, formatter -> ZonedDateTime.parse(text, formatter) })

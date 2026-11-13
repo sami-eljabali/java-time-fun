@@ -40,6 +40,10 @@ val result = "06/07/2021".toLocalDate("MM/dd/yyyy")
 val result = "06/07/2021".toLocalDate("yyyy-MM-dd", "MM/dd/yyyy")
 val result = "2024-11-15T12:34:56.123456Z".toLocalDateTime() // handles fractional seconds that Java Time doesn't
 val result = "2021-10-04T10:10:00+0000".toZonedDateTime()
+val result = "2021-10-04T10:10:00+01:00".toOffsetDateTime()
+val result = "12/25".toMonthDay("MM/dd")
+val result = "2021-06".toYearMonth()
+val result = "2021".toYear()
 ```
 ### Creation
 _Create new date/time instances using factory functions_
