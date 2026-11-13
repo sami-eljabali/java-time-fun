@@ -82,6 +82,9 @@ val result = dateA.isAfterEqualDay(dateB)
 val result = dateA.compareTime(dateB)
 val result = dateA.getMinuteDifference(dateB)
 val result = dateA.isAfterEqualTime(dateB)
+
+// Also works for OffsetDateTime
+val result = offsetDateA.isEqualDay(offsetDateB)
 ```
 
 ### Formatting
@@ -89,6 +92,7 @@ _Print dates and times using a custom format_
 ```kotlin
 val date = "2021-07-06".toZonedDateTime()
 val result = date.print(format = "MM/dd/yyyy")
+val result = YearMonth.now().print("MMM yyyy")
 ```
 
 ### Attributes & Mutations
@@ -101,6 +105,9 @@ val result = date.atStartOfDay()
 val result = date.atStartOfMonth()
 val result = date.getLast(DayOfWeek.FRIDAY)
 val result = date.getNext(DayOfWeek.MONDAY)
+
+val result = birthday.nextOccurrence() // MonthDay -> LocalDate
+val result = birthday.daysUntil()
 ```
 
 ### Durations & Periods
