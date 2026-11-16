@@ -32,7 +32,6 @@
 
 ## ✨ Features
 ### Parsing
-_Convert strings into Java Time objects with ease_
 ```kotlin
 val result = "01:30 AM".toLocalTime()
 val result = "2021-06-07".toLocalDate()
@@ -46,7 +45,6 @@ val result = "2021-06".toYearMonth()
 val result = "2021".toYear()
 ```
 ### Creation
-_Create new date/time instances using factory functions_
 ```kotlin
 val result = LocalTimeFactory.new(hour = 7, minute = 30)
 val result = LocalDateFactory.new(year = 2024, month = 11, day = 15)
@@ -55,14 +53,12 @@ val result = ZonedDateTimeFactory.new(year = 2024, month = 11, day = 15, zoneId 
 ```
 
 ### Conversion from Legacy Date Types
-_Easily convert legacy date objects to Java Time_
 ```kotlin
 val result = Date().toLocalDateTime()
 val result = GregorianCalendar().toZonedDateTime()
 ```
 
 ### Comparisons
-_Compare dates and times at various granularities_
 ```kotlin
 // Year
 val result = dateA.compareYear(dateB)
@@ -88,7 +84,6 @@ val result = offsetDateA.isEqualDay(offsetDateB)
 ```
 
 ### Formatting
-_Print dates and times using a custom format_
 ```kotlin
 val date = "2021-07-06".toZonedDateTime()
 val result = date.print(format = "MM/dd/yyyy")
@@ -96,7 +91,6 @@ val result = YearMonth.now().print("MMM yyyy")
 ```
 
 ### Attributes & Mutations
-_Query and transform date/time attributes_
 ```kotlin
 val result = date.isAtStartOfDay()
 val result = date.getDaysInMonth()
@@ -108,7 +102,6 @@ val result = date.getNext(DayOfWeek.MONDAY)
 ```
 
 ### Durations & Periods
-_Build `Duration` (sub-day, fixed length) and `Period` (calendar units) easily_
 ```kotlin
 val result = 500.milliseconds
 val result = 2.seconds * 3
@@ -117,7 +110,6 @@ val result = LocalDate.now() + 3.months
 ```
 
 ### Preset Dates
-_Quickly access commonly used dates_
 ```kotlin
 val result = LocalDates.startOfYear()
 val result = LocalDateTimes.tomorrow()
