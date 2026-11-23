@@ -1,11 +1,17 @@
 version: 2
 updates:
   - package-ecosystem: github-actions
-    directory: "/"
+    directory: "/"    
     schedule:
-      interval: daily
+      interval: weekly
+      day: monday
+      time: '06:00'
+    cooldown:
+      default-days: 7
   - package-ecosystem: gradle
     directory: "/"
     schedule:
-      interval: daily
+      interval: weekly
+      day: monday
+      time: '06:00'
     open-pull-requests-limit: 10
